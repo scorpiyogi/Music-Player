@@ -30,12 +30,7 @@ const AuthForm: FC<{ mode: "signin" | "signup" }> = ({ mode }) => {
       >
         <NextImage src="/logo.svg" height={60} width={120} />
       </Flex>
-      <Flex
-        justify="center"
-        marginTop="100px"
-        overflow="hidden"
-        height="calc(100vh-100px)"
-      >
+      <Flex justify="center" marginTop="100px" height="calc(100vh-100px)">
         <Box padding="50px" bg="gray" align="center" borderRadius="8px">
           <form onSubmit={handleSubmit}>
             <Input
