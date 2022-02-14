@@ -3772,7 +3772,7 @@ react-focus-lock@2.5.2:
 
 react-howler@^5.2.0:
   version "5.2.0"
-  resolved "https://registry.npmjs.org/react-howler/-/react-howler-5.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-howler/-/react-howler-5.2.0.tgz#fceef108f7c691f570155afee1c1436265218219"
   integrity sha512-oDK+zML0MHf3nVNM4lMxh+re87NDa7fHowea2WK8197yqnMiZfPVHoMXtfb/PtuoOsWLO06vmEAtovwTRWpTFg==
   dependencies:
     howler "^2.2.0"
