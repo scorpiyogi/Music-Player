@@ -37,23 +37,22 @@ const run = async () => {
   })
 
   const songs = await prisma.song.findMany({})
-  await Promise.all(
-    new Array(10).fill(1).map(async (_, i) => {
-      return prisma.playlist.create({
-        data: {
-          name: `Playlist #${i + 1}`,
-          user: {
-            connect: { id: user.id },
-          },
-          songs: {
-            connect: songs.map((song) => ({
-              id: song.id,
-            })),
-          },
+
+  for (let i = 0; i < 10; i++) {
+    await prisma.playlist.create({
+      data: {
+        name: `Playlist #${i + 1}`,
+        user: {
+          connect: { id: user.id },
         },
-      })
+        songs: {
+          connect: songs.map((song) => ({
+            id: song.id,
+          })),
+        },
+      },
     })
-  )
+  }
 }
 
 run()
